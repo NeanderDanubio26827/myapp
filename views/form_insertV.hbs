@@ -1,0 +1,46 @@
+{{{body}}}
+    <div class="container mt-5">
+        <form  class="row g-3" action="/insertV" method="POST" enctype="multipart/form-data">
+            <div class="col-md-4">
+                <label for="imagem" class="form-label">Imagem</label>
+                <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*">
+            </div>
+            <div class="col-md-4">
+                <label for="modelo" class="form-label">Modelo</label>
+                <input type="text" class="form-control" id="modelo" name='modelo' value=" ">
+            </div>
+            <div class="col-md-4">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" name="marca" value=" ">
+            </div>
+            <div class="col-md-4">
+                <label for="placa" class="form-label">Placa</label>
+                <input type="text" class="form-control" id="placa" name="placa" value=" ">
+            </div>
+            <div class="col-md-6">
+                <label for="chassi" class="form-label">Chassi</label>
+                <input type="text" class="form-control" id="chassi" name="chassi" value=" ">
+            </div>
+            <div class="col-md-6">
+                <label for="datas25" class="form-label">Data do S25</label>
+                <input type="date" class="form-control" id="datas25" name="datas25">
+            </div>
+            <div class="col-md-6">
+                <label for="ocorrencia" class="form-label">Ocorrência</label>
+                <select id="ocorrencia" class="form-select" name="ocorrencia">
+                    <option selected>Escolha...</option>
+                    <option>Furto</option>
+                    <option>Roubo</option>
+                    <option>Acidente</option>
+                    <option>Recuperado</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="local" class="form-label">Local do s13</label>
+                <input type="text" class="form-control" id="local" name="local">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>

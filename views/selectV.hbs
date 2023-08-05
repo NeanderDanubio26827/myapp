@@ -1,0 +1,75 @@
+{{{body}}}
+<div class="px-3 py-2 border-bottom mb-3">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <!-- <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+      <a class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-black text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </a>
+    </form> -->
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+            </path>
+          </svg>
+        </span>
+        <input type="text" class="form-control" placeholder="Faça sua busca" aria-label="Input group example"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" action="/form_insertV" method="get">
+        <div class="text-end">
+          <button type="submit" class="btn btn-light text-dark me-2">Cadastrar</button>
+        </div>
+      </form>
+
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Marca</th>
+      <th>Placa</th>
+      <th>Chassi</th>
+      <th>Data do S25</th>
+      <!--<th>Ocorrência</th>-->
+      <th>Status</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each dados}}
+    <tr>
+      <td>{{modelo}}</td>
+      <td>{{marca}}</td>
+      <td><a href="/selectImageV/{{placa}}">{{placa}}</a></td>
+      <td>{{chassi}}</td>
+      <td>{{datas25}}</td>
+      <!--<td>{{ocorrencia}}</td>-->
+      <td>{{status}}</td>
+      <td>
+        
+        <a href="/selectVOne/{{placa}}/{{modelo}}"
+          class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-black text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+          </svg>
+        </a>
+        
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

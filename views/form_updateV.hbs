@@ -1,0 +1,46 @@
+{{{body}}}
+<div class="container mt-5">
+    <form class="row g-3" action="/updateV/{{dadoV.placa}}/{{dadoV.modelo}}" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="col-md-4">
+            <label for="inputImagem" class="form-label">Imagem</label>
+            <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*" multiple>
+        </div>
+        <div class="col-md-4">
+            <label for="modelo" class="form-label">Modelo</label>
+            <input type="text" value="{{dadoV.modelo}}" class="form-control text-primary" id="modelo" name='modelo'>
+        </div>
+        <div class="col-md-4">
+            <label for="marca" class="form-label">Marca</label>
+            <input type="text" value="{{dadoV.marca}}" class="form-control text-primary" id="marca" name="marca">
+        </div>
+        <div class="col-md-4">
+            <label for="placa" class="form-label">Placa</label>
+            <input type="text" value="{{dadoV.placa}}" class="form-control text-primary" id="placa" name="placa">
+        </div>
+        <div class="col-md-6">
+            <label for="chassi" class="form-label">Chassi</label>
+            <input type="text" value="{{dadoV.chassi}}" class="form-control text-primary" id="chassi" name="chassi">
+        </div>
+        <div class="col-md-6">
+            <label for="datas25" class="form-label">Data do S25</label>
+            <input type="date" value="{{dadoV.datas25}}" class="form-control text-primary" id="datas25" name="datas25">
+        </div>
+        <div class="col-md-6">
+            <label for="ocorrencia" class="form-label">Ocorrência</label>
+            <select id="ocorrencia" value="{{dadoV.ocorrencia}}" class="form-select text-primary" name="ocorrencia">
+                <option selected>Escolha...</option>
+                <option>Furto</option>
+                <option>Roubo</option>
+                <option>Acidente</option>
+                <option>Recuperado</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="local" class="form-label">Local do s13</label>
+            <input type="text" value="{{dadoV.local}}" class="form-control text-primary" id="local" name="local">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Alterar</button>
+        </div>
+    </form>
+</div>

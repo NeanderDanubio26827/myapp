@@ -1,0 +1,86 @@
+{{{body}}}
+<div class="container mt-5">
+  <form class="row g-3" action="/updateS/{{dadoS.nomeCompleto}}/{{dadoS.apelido}}" method="post"
+    enctype="application/x-www-form-urlencoded">
+    <div class="col-md-4">
+      <label for="inputImagem" class="form-label">Imagem</label>
+      <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*">
+    </div>
+    <div class="col-md-4">
+      <label for="nomeCompleto" class="form-label">Nome Completo</label>
+      <input type="text" value="{{dadoS.nomeCompleto}}" class="form-control text-primary" id="nomeCompleto"
+        name="nomeCompleto">
+    </div>
+    <div class="col-md-4">
+      <label for="apelido" class="form-label">Apelido</label>
+      <input type="text" value="{{dadoS.apelido}}" class="form-control text-primary" id="apelido" name="apelido">
+    </div>
+    <div class="col-md-4">
+      <label for="idade" class="form-label">Idade</label>
+      <input type="number" value="{{dadoS.idade}}" class="form-control" id="idade" name="idade">
+    </div>
+    <div class="col-md-4">
+      <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+      <input type="date" value="{{dadoS.dataNascimento}}" class="form-control" id="dataNascimento"
+        name="dataNascimento">
+    </div>
+    <div class="col-md-4">
+      <label for="sexo" class="form-label">Sexo</label>
+      <select id="sexo" value="{{dadoS.sexo}}" class="form-select text-primary" name="sexo">
+        <option>Masculino</option>
+        <option>Feminino</option>
+        <option selected>Outro</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="tatoo" class="form-label">Tatuagem</label>
+      <select id="tatoo" value="{{dadoS.tatoo}}" class="form-select text-primary" name="tatoo" multiple>
+        <option selected>Nenhuma</option>
+        <option>Perna Esquerda</option>
+        <option>Pé Esquerdo</option>
+        <option>Perna Direita</option>
+        <option>Pé Direito</option>
+        <option>Braço Esquerdo</option>
+        <option>Mão Esquerda</option>
+        <option>Braço Direito</option>
+        <option>Mão Direita</option>
+        <option>Torax</option>
+        <option>Pescoço</option>
+        <option>Costas</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label for="genitora" class="form-label">Nome da Genitora</label>
+      <input type="text" value="{{dadoS.genitora}}" class="form-control text-primary" id="genitora" name="genitora">
+    </div>
+    <div class="col-md-4">
+      <label for="genitor" class="form-label">Nome do Genitor</label>
+      <input type="text" value="{{dadoS.genitor}}" class="form-control text-primary" id="genitor" name="genitor">
+    </div>
+    <div class="col-md-4">
+      <label for="faccoes" class="form-label">Faccoes</label>
+      <input type="text" value="{{dadoS.faccoes}}" class="form-control text-primary" id="faccoes" name="faccoes">
+    </div>
+    <div class="col-md-4">
+      <label for="rua" class="form-label">Rua</label>
+      <input type="text" value="{{dadoS.rua}}" class="form-control text-primary" id="rua" name="rua">
+    </div>
+    <div class="col-md-4">
+      <label for="numero" class="form-label">Número</label>
+      <input type="text" value="{{dadoS.numero}}" class="form-control text-primary" id="numero" name="numero">
+    </div>
+
+    <div class="col-md-4">
+      <label for="bairro" class="form-label">Bairro</label>
+      <input type="text" value="{{dadoS.bairro}}" class="form-control text-primary" id="bairro" name="bairro">
+    </div>
+    <div class="col-md-6">
+      <label for="local" class="form-label">Local do s13/abordagem</label>
+      <input type="text" value="{{dadoS.local}}" class="form-control text-primary" id="local" name="local">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Alterar</button>
+    </div>
+  </form>
+</div>
