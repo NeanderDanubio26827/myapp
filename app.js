@@ -96,7 +96,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -108,7 +107,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = 3000; 
+const port = process.env.PORT || 3000; // Use a variável de ambiente PORT se estiver definida, caso contrário, use 4000 como valor padrão.
 
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`);
